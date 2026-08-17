@@ -86,7 +86,8 @@ const AREA_ASSUME = { 城市: '约200km²', 关隘: '约100km²', 领地: '约10
 
 // ---------- 拼 SVG ----------
 const parts = [];
-parts.push(`<svg viewBox="-5 -6 110 104" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif">`);
+// viewBox：地图 (0,0,100,92) 居中，四周留白放标题/图例/比例尺
+parts.push(`<svg viewBox="-14 -20 158 132" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif">`);
 
 // 底图（未定义地形）
 parts.push(`<rect x="0" y="0" width="100" height="92" fill="${C.land}"/>`);
@@ -167,49 +168,75 @@ for (const loc of m.locations) {
 }
 parts.push(`</g>`);
 
-// 地点名称标签（SVG 坐标，不翻转）
-parts.push(`<g fill="#222" font-size="${0}">`);
+// 地点名称标签（SVG 坐标，不翻转；带碰撞规避：右→左→上→下→四斜角）
+parts.push(`<g fill="#222">`);
+const SHORT = { 'protagonist-domain': '林德霍姆', 'dwarf-mine-town': '山民矿镇', 'east-march': '东境戍关', 'west-harbor': '西港', 'dwarf-mount': '山民山地' };
+const placed = [];
 for (const loc of m.locations) {
   const t = loc.type;
-  const sy = Y1 - loc.y;
+  const name = SHORT[loc.id] || loc.name;
   const fs = FSIZE[t] || 1.0;
-  const dx = (MARK[t] === 'tri' ? 1.6 : 2.2);
-  parts.push(`<text x="${loc.x + dx}" y="${sy + fs * 0.35}" font-size="${fs}" fill="#1c1c1c" stroke="#fff" stroke-width="0.35" paint-order="stroke">${loc.name}</text>`);
+  const w = name.length * fs * 0.95; // 宽度估计
+  const isTri = MARK[t] === 'tri';
+  const dy0 = fs * 0.35;
+  const tries = [
+    { dx: (isTri ? 1.6 : 2.2), dy: dy0, anchor: 'start' },                // 右
+    { dx: -(isTri ? 1.6 : 2.2) - w, dy: dy0, anchor: 'end' },             // 左
+    { dx: -w / 2, dy: -0.9, anchor: 'middle' },                           // 上
+    { dx: -w / 2, dy: fs + 1.5, anchor: 'middle' },                       // 下
+    { dx: (isTri ? 1.6 : 2.2), dy: -0.9, anchor: 'start' },               // 右上
+    { dx: (isTri ? 1.6 : 2.2), dy: fs + 1.5, anchor: 'start' },           // 右下
+    { dx: -(isTri ? 1.6 : 2.2) - w, dy: -0.9, anchor: 'end' },            // 左上
+    { dx: -(isTri ? 1.6 : 2.2) - w, dy: fs + 1.5, anchor: 'end' },        // 左下
+  ];
+  let chosen = tries[0];
+  for (const t2 of tries) {
+    const bx = loc.x + t2.dx, by = Y1 - loc.y + t2.dy;
+    const box = { x1: Math.min(bx, bx + w) - 0.4, x2: Math.max(bx, bx + w) + 0.4, y1: by - fs - 0.4, y2: by + 0.6 };
+    const conflict = placed.some((p) => !(box.x2 < p.x1 || box.x1 > p.x2 || box.y2 < p.y1 || box.y1 > p.y2));
+    if (!conflict) { chosen = t2; placed.push(box); break; }
+  }
+  if (chosen === tries[0]) {
+    const bx = loc.x + chosen.dx, by = Y1 - loc.y + chosen.dy;
+    placed.push({ x1: bx, x2: bx + w, y1: by - fs, y2: by });
+  }
+  parts.push(`<text x="${loc.x + chosen.dx}" y="${Y1 - loc.y + chosen.dy}" font-size="${fs}" fill="#1c1c1c" stroke="#fff" stroke-width="0.35" paint-order="stroke" text-anchor="${chosen.anchor}">${name}</text>`);
 }
 parts.push(`</g>`);
 
-// 图例（右上）
-const LX = 62, LY0 = 3, LH = 4.2;
-parts.push(`<g font-size="1.5" fill="#1c1c1c">`);
-parts.push(`<rect x="${LX - 1.5}" y="${LY0 - 1}" width="40" height="${LH * 8 + 2}" fill="#fdfbf4" stroke="#999" stroke-width="0.3" rx="1"/>`);
+// 图例（地图右侧留白区，不遮挡地图）
+const LX = 104, LY0 = -16, LH = 4.6;
+parts.push(`<g font-size="1.6" fill="#1c1c1c">`);
+parts.push(`<rect x="${LX - 2}" y="${LY0 - 2}" width="37" height="${LH * 9 + 3.5}" fill="#fdfbf4" stroke="#999" stroke-width="0.35" rx="1"/>`);
 let ly = LY0;
-parts.push(`<text x="${LX}" y="${ly}" font-size="1.6" font-weight="bold">图例</text>`); ly += LH;
+parts.push(`<text x="${LX}" y="${ly}" font-size="2.0" font-weight="bold">图例</text>`); ly += LH;
 for (const type of ORDER) {
-  parts.push(`<rect x="${LX}" y="${ly - 1}" width="2.4" height="2" fill="${C[type]}" stroke="#666" stroke-width="0.15"/>`);
-  parts.push(`<text x="${LX + 3.4}" y="${ly + 0.6}">${NAME_CN[type]}</text>`); ly += LH;
+  parts.push(`<rect x="${LX}" y="${ly - 1.1}" width="2.6" height="2.1" fill="${C[type]}" stroke="#666" stroke-width="0.15"/>`);
+  parts.push(`<text x="${LX + 3.8}" y="${ly}">${NAME_CN[type]}</text>`); ly += LH;
 }
-parts.push(`<rect x="${LX}" y="${ly - 1}" width="2.4" height="2" fill="${C.river}" opacity="0.5"/>`);
-parts.push(`<text x="${LX + 3.4}" y="${ly + 0.6}">河流</text>`); ly += LH;
-parts.push(`<circle cx="${LX + 1.2}" cy="${ly - 0.1}" r="1" fill="#3a3a3a"/>`);
-parts.push(`<text x="${LX + 3.4}" y="${ly + 0.6}">城市（约200km²）</text>`); ly += LH;
-parts.push(`<circle cx="${LX + 1.2}" cy="${ly - 0.1}" r="0.55" fill="#3a3a3a"/>`);
-parts.push(`<text x="${LX + 3.4}" y="${ly + 0.6}">集镇/哨站</text>`); ly += LH;
-parts.push(`<line x1="${LX}" y1="${ly - 0.3}" x2="${LX + 2.4}" y2="${ly - 0.3}" stroke="#5a4a3a" stroke-width="0.35"/>`);
-parts.push(`<text x="${LX + 3.4}" y="${ly + 0.6}">官道</text>`); ly += LH;
-parts.push(`<line x1="${LX}" y1="${ly - 0.3}" x2="${LX + 2.4}" y2="${ly - 0.3}" stroke="#8a7a6a" stroke-width="0.18"/>`);
-parts.push(`<text x="${LX + 3.4}" y="${ly + 0.6}">乡道</text>`); ly += LH;
+parts.push(`<rect x="${LX}" y="${ly - 1.1}" width="2.6" height="2.1" fill="${C.river}" opacity="0.5"/>`);
+parts.push(`<text x="${LX + 3.8}" y="${ly}">河流</text>`); ly += LH;
+parts.push(`<circle cx="${LX + 1.3}" cy="${ly - 0.6}" r="1.05" fill="#3a3a3a"/>`);
+parts.push(`<text x="${LX + 3.8}" y="${ly}">城市（约200km²）</text>`); ly += LH;
+parts.push(`<circle cx="${LX + 1.3}" cy="${ly - 0.6}" r="0.55" fill="#3a3a3a"/>`);
+parts.push(`<text x="${LX + 3.8}" y="${ly}">集镇/哨站</text>`); ly += LH;
+parts.push(`<line x1="${LX}" y1="${ly - 0.4}" x2="${LX + 2.6}" y2="${ly - 0.4}" stroke="#5a4a3a" stroke-width="0.35"/>`);
+parts.push(`<text x="${LX + 3.8}" y="${ly}">官道</text>`); ly += LH;
+parts.push(`<line x1="${LX}" y1="${ly - 0.4}" x2="${LX + 2.6}" y2="${ly - 0.4}" stroke="#8a7a6a" stroke-width="0.18"/>`);
+parts.push(`<text x="${LX + 3.8}" y="${ly}">乡道</text>`); ly += LH;
 parts.push(`</g>`);
 
-// 标题 + 比例尺（底部）
+// 标题 + 注释（地图上方留白）
 const kmPerCell = KM;
-parts.push(`<text x="2" y="3.2" font-size="2.6" font-weight="bold" fill="#1c1c1c">${m.meta.title}</text>`);
-parts.push(`<text x="2" y="6.4" font-size="1.4" fill="#444">1 格 = ${kmPerCell} km（每格 ${kmPerCell * kmPerCell} km²）· 地点面积按类型假设</text>`);
+parts.push(`<text x="-12" y="-13" font-size="3.4" font-weight="bold" fill="#1c1c1c">${m.meta.title}</text>`);
+parts.push(`<text x="-12" y="-6.5" font-size="1.8" fill="#555">1 格 = ${kmPerCell} km（每格 ${kmPerCell * kmPerCell} km²）· 地貌与地点面积为假设估计</text>`);
+// 比例尺（地图下方留白）
 {
-  const sx = 2, sy = 97.5, len = 10; // 10 格 = 50km
-  parts.push(`<rect x="${sx}" y="${sy}" width="${len}" height="1.6" fill="#fff" stroke="#333" stroke-width="0.3"/>`);
-  for (let i = 1; i < len; i++) parts.push(`<line x1="${sx + i}" y1="${sy}" x2="${sx + i}" y2="${sy + 1.6}" stroke="#333" stroke-width="0.15"/>`);
-  parts.push(`<text x="${sx}" y="${sy + 3.2}" font-size="1.4" fill="#333">0</text>`);
-  parts.push(`<text x="${sx + len - 2}" y="${sy + 3.2}" font-size="1.4" fill="#333">${len * kmPerCell} km</text>`);
+  const sx = -12, sy = 100, len = 10; // 10 格 = 50km
+  parts.push(`<rect x="${sx}" y="${sy}" width="${len}" height="1.8" fill="#fff" stroke="#333" stroke-width="0.3"/>`);
+  for (let i = 1; i < len; i++) parts.push(`<line x1="${sx + i}" y1="${sy}" x2="${sx + i}" y2="${sy + 1.8}" stroke="#333" stroke-width="0.15"/>`);
+  parts.push(`<text x="${sx}" y="${sy + 3.6}" font-size="1.7" fill="#333">0</text>`);
+  parts.push(`<text x="${sx + len - 3}" y="${sy + 3.6}" font-size="1.7" fill="#333">${len * kmPerCell} km</text>`);
 }
 parts.push(`</svg>`);
 
