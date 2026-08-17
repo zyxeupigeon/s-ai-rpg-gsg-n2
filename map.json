@@ -2,7 +2,7 @@
   "meta": {
     "title": "瓦恩海姆（Varnheim）· 主干锚点 + 阶段二政治版图",
     "coordinateSystem": "grid",
-    "scaleKmPerCell": 20,
+    "scaleKmPerCell": 5,
     "hoursPerDay": 8,
     "pacings": {
       "foot": {
@@ -218,112 +218,112 @@
       "from": "waldburg",
       "to": "protagonist-domain",
       "group": "乡道",
-      "lengthKm": 412,
+      "lengthKm": 103,
       "terrainMod": 1
     },
     {
       "from": "waldburg",
       "to": "west-harbor",
       "group": "官道",
-      "lengthKm": 707,
+      "lengthKm": 177,
       "terrainMod": 0.8
     },
     {
       "from": "waldburg",
       "to": "east-march",
       "group": "官道",
-      "lengthKm": 961,
+      "lengthKm": 240,
       "terrainMod": 0.8
     },
     {
       "from": "waldburg",
       "to": "north-fjord",
       "group": "官道",
-      "lengthKm": 1204,
+      "lengthKm": 301,
       "terrainMod": 0.8
     },
     {
       "from": "protagonist-domain",
       "to": "dwarf-mine-town",
       "group": "乡道",
-      "lengthKm": 89,
+      "lengthKm": 22,
       "terrainMod": 1
     },
     {
       "from": "protagonist-domain",
       "to": "hagen-domain",
       "group": "乡道",
-      "lengthKm": 126,
+      "lengthKm": 32,
       "terrainMod": 1
     },
     {
       "from": "protagonist-domain",
       "to": "stein-domain",
       "group": "乡道",
-      "lengthKm": 122,
+      "lengthKm": 31,
       "terrainMod": 1
     },
     {
       "from": "protagonist-domain",
       "to": "old-town",
       "group": "乡道",
-      "lengthKm": 28,
+      "lengthKm": 7,
       "terrainMod": 1
     },
     {
       "from": "old-town",
       "to": "dwarf-mine-town",
       "group": "乡道",
-      "lengthKm": 102,
+      "lengthKm": 26,
       "terrainMod": 1
     },
     {
       "from": "protagonist-domain",
       "to": "valen-city",
       "group": "官道",
-      "lengthKm": 263,
+      "lengthKm": 66,
       "terrainMod": 0.8
     },
     {
       "from": "valen-city",
       "to": "waldburg",
       "group": "官道",
-      "lengthKm": 260,
+      "lengthKm": 65,
       "terrainMod": 0.8
     },
     {
       "from": "waldburg",
       "to": "eichburg",
       "group": "官道",
-      "lengthKm": 240,
+      "lengthKm": 60,
       "terrainMod": 0.8
     },
     {
       "from": "waldburg",
       "to": "westburg",
       "group": "官道",
-      "lengthKm": 482,
+      "lengthKm": 121,
       "terrainMod": 0.8
     },
     {
       "from": "waldburg",
       "to": "frostburg",
       "group": "官道",
-      "lengthKm": 760,
+      "lengthKm": 190,
       "terrainMod": 0.8
     },
     {
       "from": "waldburg",
       "to": "velen-city",
       "group": "官道",
-      "lengthKm": 480,
+      "lengthKm": 120,
       "terrainMod": 0.8
     },
     {
       "from": "waldburg",
       "to": "kalden-city",
       "group": "官道",
-      "lengthKm": 622,
+      "lengthKm": 156,
       "terrainMod": 0.8
     }
   ],
