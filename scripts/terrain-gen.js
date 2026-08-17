@@ -20,13 +20,13 @@ const AREA = CELL * CELL; // km² / 格
 // ---------- 地貌定义（世界内命名，类型值对齐 geo.js terrainCost key） ----------
 // 优先级 = 数组顺序（先定义者优先）；海/山/河/沼 在前，森林/丘陵 居中，平原 最后
 const REGIONS = [
-  // 隔断型
+  // 隔断型（海/山/河/沼 高优先；山与河用蜿蜒 path 而非矩形）
   { id: 'west-sea', name: '西海', type: 'sea', rect: [0, 8, 3, 45] },
   { id: 'fjord-sea', name: '峡湾海', type: 'sea', rect: [26, 90, 44, 92] },
-  { id: 'white-stone-mountains', name: '白石山脉', type: 'mountain', rect: [28, 7, 50, 10] },
-  { id: 'white-stone-river', name: '白石河（界河）', type: 'river', rect: [28, 11, 52, 11] },
-  { id: 'zhu-shu-river', name: '椴树河', type: 'river', path: [[20, 21], [21, 19], [23, 18], [25, 17]] },
-  { id: 'shu-river', name: '戍河（东境大河）', type: 'river', rect: [84, 12, 88, 48] },
+  { id: 'white-stone-mountains', name: '白石山脉', type: 'mountain', path: [[28, 9], [32, 8], [36, 9], [40, 8], [44, 9], [48, 8], [52, 9]], width: 3 },
+  { id: 'white-stone-river', name: '白石河（界河）', type: 'river', path: [[28, 11], [32, 12], [36, 10], [40, 12], [44, 10], [48, 12], [52, 11]], width: 2 },
+  { id: 'zhu-shu-river', name: '椴树河', type: 'river', path: [[19, 25], [21, 22], [22, 20], [22, 18], [24, 17], [26, 16], [29, 14], [32, 12], [33, 11]], width: 1 },
+  { id: 'shu-river', name: '戍河（东境大河）', type: 'river', path: [[86, 12], [84, 16], [87, 20], [85, 25], [87, 30], [84, 35], [86, 40], [85, 45], [86, 48]], width: 2 },
   { id: 'east-swamp', name: '东境泥沼', type: 'swamp', rect: [70, 15, 80, 45] },
   { id: 'scourge-wasteland', name: '蚀荒', type: 'swamp', rect: [89, 15, 100, 48] },
   // 区域型（森林/丘陵/山地）
@@ -54,7 +54,9 @@ function regionAt(x, y) {
       if (x >= x0 && x <= x1 && y >= y0 && y <= y1) return r;
     }
     if (r.path) {
-      if (r.path.some(([px, py]) => px === x && py === y)) return r;
+      // path 用曼哈顿距离扩展宽度：width 默认 1（单格）
+      const w = Math.floor((r.width || 1) / 2);
+      if (r.path.some(([px, py]) => Math.abs(px - x) + Math.abs(py - y) <= w)) return r;
     }
   }
   return null;
