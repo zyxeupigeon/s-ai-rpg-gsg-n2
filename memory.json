@@ -211,3 +211,5 @@
 {"type":"relation","from":"西南原野","to":"原野骑手","relationType":"游牧地"}
 {"type":"relation","from":"北境牧场","to":"英格玛","relationType":"腹地"}
 {"type":"relation","from":"西境酒乡","to":"韦斯特家族","relationType":"所在"}
+{"type":"entity","name":"半瞎老猫","entityType":"人物","observations":["老镇黑市贩子，收流匪赃物（羊/粮/货）","销赃渠道线索：疤脸的赃物卖过他这里","丽芙元月3日晚摸底中，暂不打草惊蛇"]}
+{"type":"relation","from":"半瞎老猫","to":"老镇","relationType":"黑市贩子"}
