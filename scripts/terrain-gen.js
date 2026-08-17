@@ -100,15 +100,19 @@ for (const loc of m.locations) {
 if (DRY) { console.log('\n(--dry 未写入)'); process.exit(0); }
 
 const terrain = [];
+// 非 river：采样（步长 4，控制文件大小）
 for (let x = 0; x <= 100; x += 4) {
   for (let y = 0; y <= 92; y += 4) {
     const r = regionAt(x, y);
-    if (r) terrain.push({ x, y, terrain: r.type, controllerId: null, region: r.name });
+    if (r && r.type !== 'river') terrain.push({ x, y, terrain: r.type, controllerId: null, region: r.name });
   }
 }
-for (const r of REGIONS) {
-  if (!r.path) continue;
-  for (const [px, py] of r.path) terrain.push({ x: px, y: py, terrain: r.type, controllerId: null, region: r.name });
+// river：全写（步长 1——横线河/窄河道不能被采样漏掉）
+for (let x = 0; x <= 100; x++) {
+  for (let y = 0; y <= 92; y++) {
+    const r = regionAt(x, y);
+    if (r && r.type === 'river') terrain.push({ x, y, terrain: r.type, controllerId: null, region: r.name });
+  }
 }
 // 去重
 const seen = new Set();
