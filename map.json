@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "瓦恩海姆（Varnheim）· 主干锚点",
+    "title": "瓦恩海姆（Varnheim）· 主干锚点 + 阶段二政治版图",
     "coordinateSystem": "grid",
     "scaleKmPerCell": 20,
     "hoursPerDay": 8,
@@ -31,23 +31,51 @@
     { "id": "west-harbor", "name": "西港城带", "type": "城市", "x": 5, "y": 25, "terrain": "plain", "controllerId": "harbor-league", "territoryId": "harbor-league" },
     { "id": "dwarf-mount", "name": "山民山地", "type": "山脉", "x": 50, "y": 70, "terrain": "mountain", "controllerId": "dwarves", "territoryId": "dwarves" },
     { "id": "dwarf-mine-town", "name": "山民矿镇（西南）", "type": "集镇", "x": 26, "y": 18, "terrain": "hill", "controllerId": "dwarves", "territoryId": "dwarves" },
-    { "id": "east-march", "name": "东境戍关", "type": "关隘", "x": 88, "y": 28, "terrain": "plain", "controllerId": "waldan", "territoryId": "waldan" }
+    { "id": "east-march", "name": "东境戍关", "type": "关隘", "x": 88, "y": 28, "terrain": "plain", "controllerId": "waldan", "territoryId": "waldan" },
+    { "id": "valen-city", "name": "瓦伦城", "type": "城市", "x": 35, "y": 18, "terrain": "plain", "controllerId": "valen", "territoryId": "valen-duchy" },
+    { "id": "hagen-domain", "name": "哈根领地", "type": "领地", "x": 16, "y": 22, "terrain": "hill", "controllerId": "hagen", "territoryId": "hagen-domain" },
+    { "id": "stein-domain", "name": "施泰因领地", "type": "领地", "x": 28, "y": 19, "terrain": "hill", "controllerId": "stein", "territoryId": "stein-domain" },
+    { "id": "old-town", "name": "没落老镇", "type": "集镇", "x": 24, "y": 17, "terrain": "plain", "controllerId": "valen", "territoryId": "valen-duchy" },
+    { "id": "eichburg", "name": "艾希堡", "type": "城市", "x": 52, "y": 30, "terrain": "plain", "controllerId": "eich", "territoryId": "eich-duchy" },
+    { "id": "westburg", "name": "韦斯特堡", "type": "城市", "x": 16, "y": 32, "terrain": "plain", "controllerId": "west", "territoryId": "west-duchy" },
+    { "id": "frostburg", "name": "霜堡", "type": "城市", "x": 40, "y": 68, "terrain": "hill", "controllerId": "northduke", "territoryId": "north-duchy" },
+    { "id": "velen-city", "name": "维伦城", "type": "城市", "x": 40, "y": 6, "terrain": "plain", "controllerId": "velen", "territoryId": "velen" },
+    { "id": "kalden-city", "name": "卡尔登城", "type": "城市", "x": 62, "y": 8, "terrain": "plain", "controllerId": "kalden", "territoryId": "kalden" }
   ],
   "routes": [
     { "from": "waldburg", "to": "protagonist-domain", "group": "乡道", "lengthKm": 412, "terrainMod": 1.0 },
     { "from": "waldburg", "to": "west-harbor", "group": "官道", "lengthKm": 707, "terrainMod": 0.8 },
     { "from": "waldburg", "to": "east-march", "group": "官道", "lengthKm": 961, "terrainMod": 0.8 },
     { "from": "waldburg", "to": "north-fjord", "group": "官道", "lengthKm": 1204, "terrainMod": 0.8 },
-    { "from": "protagonist-domain", "to": "dwarf-mine-town", "group": "乡道", "lengthKm": 89, "terrainMod": 1.0 }
+    { "from": "protagonist-domain", "to": "dwarf-mine-town", "group": "乡道", "lengthKm": 89, "terrainMod": 1.0 },
+    { "from": "protagonist-domain", "to": "hagen-domain", "group": "乡道", "lengthKm": 126, "terrainMod": 1.0 },
+    { "from": "protagonist-domain", "to": "stein-domain", "group": "乡道", "lengthKm": 122, "terrainMod": 1.0 },
+    { "from": "protagonist-domain", "to": "old-town", "group": "乡道", "lengthKm": 72, "terrainMod": 1.0 },
+    { "from": "old-town", "to": "dwarf-mine-town", "group": "乡道", "lengthKm": 45, "terrainMod": 1.0 },
+    { "from": "protagonist-domain", "to": "valen-city", "group": "官道", "lengthKm": 263, "terrainMod": 0.8 },
+    { "from": "valen-city", "to": "waldburg", "group": "官道", "lengthKm": 260, "terrainMod": 0.8 },
+    { "from": "waldburg", "to": "eichburg", "group": "官道", "lengthKm": 240, "terrainMod": 0.8 },
+    { "from": "waldburg", "to": "westburg", "group": "官道", "lengthKm": 482, "terrainMod": 0.8 },
+    { "from": "waldburg", "to": "frostburg", "group": "官道", "lengthKm": 760, "terrainMod": 0.8 },
+    { "from": "waldburg", "to": "velen-city", "group": "官道", "lengthKm": 480, "terrainMod": 0.8 },
+    { "from": "waldburg", "to": "kalden-city", "group": "官道", "lengthKm": 622, "terrainMod": 0.8 }
   ],
   "territories": [
     { "name": "瓦德兰王国", "type": "王国", "controllerId": "waldan", "capitalId": "waldburg", "locations": ["waldburg", "protagonist-domain", "east-march"], "neighbors": [] },
-    { "name": "主角领地（名待定）", "type": "领地", "controllerId": "tbd-protagonist", "capitalId": "protagonist-domain", "locations": ["protagonist-domain"], "neighbors": [] },
+    { "name": "主角领地（名待定）", "type": "领地", "controllerId": "tbd-protagonist", "capitalId": "protagonist-domain", "locations": ["protagonist-domain"], "neighbors": ["hagen-domain", "stein-domain"] },
+    { "name": "瓦伦公爵领", "type": "公爵领", "controllerId": "valen", "capitalId": "valen-city", "locations": ["valen-city", "protagonist-domain", "hagen-domain", "stein-domain", "old-town"], "neighbors": ["waldan"] },
+    { "name": "哈根领地", "type": "领地", "controllerId": "hagen", "capitalId": "hagen-domain", "locations": ["hagen-domain"], "neighbors": ["protagonist-domain"] },
+    { "name": "施泰因领地", "type": "领地", "controllerId": "stein", "capitalId": "stein-domain", "locations": ["stein-domain"], "neighbors": ["protagonist-domain"] },
+    { "name": "艾希公爵领", "type": "公爵领", "controllerId": "eich", "capitalId": "eichburg", "locations": ["eichburg"], "neighbors": ["waldan"] },
+    { "name": "韦斯特公爵领", "type": "公爵领", "controllerId": "west", "capitalId": "westburg", "locations": ["westburg"], "neighbors": ["waldan"] },
+    { "name": "北方公爵领", "type": "公爵领", "controllerId": "northduke", "capitalId": "frostburg", "locations": ["frostburg"], "neighbors": ["waldan"] },
     { "name": "林民古氏族", "type": "异族领地", "controllerId": "elves", "capitalId": "vard-forest", "locations": ["vard-forest"], "neighbors": [] },
     { "name": "蚀荒", "type": "魔族领地", "controllerId": "scourge", "capitalId": "scourge-waste", "locations": ["scourge-waste"], "neighbors": [] },
     { "name": "北方诸部", "type": "部族邦联", "controllerId": "northfolk", "capitalId": "north-fjord", "locations": ["north-fjord"], "neighbors": [] },
     { "name": "西港自由城市同盟", "type": "自由城市同盟", "controllerId": "harbor-league", "capitalId": "west-harbor", "locations": ["west-harbor"], "neighbors": [] },
-    { "name": "山民诸镇", "type": "异族领地", "controllerId": "dwarves", "capitalId": "dwarf-mount", "locations": ["dwarf-mount", "dwarf-mine-town"], "neighbors": [] }
+    { "name": "山民诸镇", "type": "异族领地", "controllerId": "dwarves", "capitalId": "dwarf-mount", "locations": ["dwarf-mount", "dwarf-mine-town"], "neighbors": [] },
+    { "name": "维伦王国", "type": "王国", "controllerId": "velen", "capitalId": "velen-city", "locations": ["velen-city"], "neighbors": ["waldan"] },
+    { "name": "卡尔登王国", "type": "王国", "controllerId": "kalden", "capitalId": "kalden-city", "locations": ["kalden-city"], "neighbors": ["waldan"] }
   ],
   "terrain": []
 }
