@@ -505,5 +505,2330 @@
       ]
     }
   ],
-  "terrain": []
+  "terrain": [
+    {
+      "x": 0,
+      "y": 8,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 16,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 20,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 24,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 28,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 32,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 36,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 40,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 0,
+      "y": 44,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "西海"
+    },
+    {
+      "x": 4,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西南原野"
+    },
+    {
+      "x": 4,
+      "y": 20,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 4,
+      "y": 24,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 4,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 4,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西南原野"
+    },
+    {
+      "x": 8,
+      "y": 20,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 8,
+      "y": 24,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 8,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 8,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "西岸崖丘"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西南原野"
+    },
+    {
+      "x": 12,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西南原野"
+    },
+    {
+      "x": 12,
+      "y": 24,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西南原野"
+    },
+    {
+      "x": 12,
+      "y": 28,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 12,
+      "y": 32,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 12,
+      "y": 36,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 12,
+      "y": 40,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 16,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "上游河谷"
+    },
+    {
+      "x": 16,
+      "y": 24,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "上游河谷"
+    },
+    {
+      "x": 16,
+      "y": 28,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 16,
+      "y": 32,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 16,
+      "y": 36,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 16,
+      "y": 40,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "西境酒乡"
+    },
+    {
+      "x": 20,
+      "y": 20,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "椴树丘地"
+    },
+    {
+      "x": 20,
+      "y": 24,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 20,
+      "y": 28,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 20,
+      "y": 32,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 20,
+      "y": 36,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 20,
+      "y": 40,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 20,
+      "y": 44,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 20,
+      "y": 48,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 24,
+      "y": 20,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "椴树丘地"
+    },
+    {
+      "x": 24,
+      "y": 24,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 24,
+      "y": 28,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 24,
+      "y": 32,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 24,
+      "y": 36,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 24,
+      "y": 40,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 24,
+      "y": 44,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 24,
+      "y": 48,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 8,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "白石山脉"
+    },
+    {
+      "x": 28,
+      "y": 20,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "椴树丘地"
+    },
+    {
+      "x": 28,
+      "y": 24,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 28,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 32,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 36,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 40,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 44,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 48,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 28,
+      "y": 52,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 28,
+      "y": 56,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 28,
+      "y": 60,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 28,
+      "y": 64,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 28,
+      "y": 68,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 28,
+      "y": 72,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 28,
+      "y": 76,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 28,
+      "y": 80,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 28,
+      "y": 84,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 28,
+      "y": 88,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 28,
+      "y": 92,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "峡湾海"
+    },
+    {
+      "x": 32,
+      "y": 0,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 32,
+      "y": 4,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 32,
+      "y": 8,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "白石山脉"
+    },
+    {
+      "x": 32,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 32,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 32,
+      "y": 24,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 32,
+      "y": 28,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 32,
+      "y": 32,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 32,
+      "y": 36,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 32,
+      "y": 40,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 32,
+      "y": 44,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 32,
+      "y": 48,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 32,
+      "y": 52,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 32,
+      "y": 56,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 32,
+      "y": 60,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 32,
+      "y": 64,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 32,
+      "y": 68,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 32,
+      "y": 72,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 32,
+      "y": 76,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 32,
+      "y": 80,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 32,
+      "y": 84,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 32,
+      "y": 88,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 32,
+      "y": 92,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "峡湾海"
+    },
+    {
+      "x": 36,
+      "y": 0,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 36,
+      "y": 4,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 36,
+      "y": 8,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "白石山脉"
+    },
+    {
+      "x": 36,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 36,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 36,
+      "y": 24,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 36,
+      "y": 28,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 36,
+      "y": 32,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 36,
+      "y": 36,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 36,
+      "y": 40,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 36,
+      "y": 44,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 36,
+      "y": 48,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "瓦德森林"
+    },
+    {
+      "x": 36,
+      "y": 52,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 36,
+      "y": 56,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 36,
+      "y": 60,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 36,
+      "y": 64,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 36,
+      "y": 68,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 36,
+      "y": 72,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 36,
+      "y": 76,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 36,
+      "y": 80,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 36,
+      "y": 84,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 36,
+      "y": 88,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 36,
+      "y": 92,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "峡湾海"
+    },
+    {
+      "x": 40,
+      "y": 0,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 40,
+      "y": 4,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 40,
+      "y": 8,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "白石山脉"
+    },
+    {
+      "x": 40,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 40,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 40,
+      "y": 24,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 40,
+      "y": 28,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 40,
+      "y": 32,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 40,
+      "y": 44,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 48,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 52,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 56,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 60,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 64,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 68,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 72,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 76,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 40,
+      "y": 80,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 40,
+      "y": 84,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 40,
+      "y": 88,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 40,
+      "y": 92,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "峡湾海"
+    },
+    {
+      "x": 44,
+      "y": 0,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 44,
+      "y": 4,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 44,
+      "y": 8,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "白石山脉"
+    },
+    {
+      "x": 44,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 44,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 44,
+      "y": 24,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 44,
+      "y": 28,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 44,
+      "y": 32,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 44,
+      "y": 44,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 48,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 52,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 56,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 60,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 64,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 68,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 72,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 76,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 44,
+      "y": 80,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 44,
+      "y": 84,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 44,
+      "y": 88,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 44,
+      "y": 92,
+      "terrain": "sea",
+      "controllerId": null,
+      "region": "峡湾海"
+    },
+    {
+      "x": 48,
+      "y": 0,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 48,
+      "y": 4,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 48,
+      "y": 8,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "白石山脉"
+    },
+    {
+      "x": 48,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 48,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 48,
+      "y": 24,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 48,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 48,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 48,
+      "y": 36,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 48,
+      "y": 40,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 48,
+      "y": 44,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 48,
+      "y": 48,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 48,
+      "y": 52,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 48,
+      "y": 56,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 48,
+      "y": 60,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 48,
+      "y": 64,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 48,
+      "y": 68,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 48,
+      "y": 72,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 48,
+      "y": 76,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 48,
+      "y": 80,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 48,
+      "y": 84,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 48,
+      "y": 88,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 48,
+      "y": 92,
+      "terrain": "forest",
+      "controllerId": null,
+      "region": "北境针叶林"
+    },
+    {
+      "x": 52,
+      "y": 0,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 52,
+      "y": 4,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "维伦低地"
+    },
+    {
+      "x": 52,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 52,
+      "y": 20,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 52,
+      "y": 24,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "南部低地"
+    },
+    {
+      "x": 52,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 52,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 52,
+      "y": 36,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 52,
+      "y": 40,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 52,
+      "y": 44,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 52,
+      "y": 48,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 52,
+      "y": 52,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 52,
+      "y": 56,
+      "terrain": "plain",
+      "controllerId": null,
+      "region": "北境牧场"
+    },
+    {
+      "x": 52,
+      "y": 60,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 52,
+      "y": 64,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 52,
+      "y": 68,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 52,
+      "y": 72,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 52,
+      "y": 76,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 52,
+      "y": 80,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 56,
+      "y": 0,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 56,
+      "y": 4,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 56,
+      "y": 8,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 56,
+      "y": 12,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 56,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 56,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 56,
+      "y": 36,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 56,
+      "y": 40,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 56,
+      "y": 60,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 56,
+      "y": 64,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 56,
+      "y": 68,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 56,
+      "y": 72,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 56,
+      "y": 76,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 56,
+      "y": 80,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 60,
+      "y": 0,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 60,
+      "y": 4,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 60,
+      "y": 8,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 60,
+      "y": 12,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 60,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 60,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 60,
+      "y": 36,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 60,
+      "y": 40,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 60,
+      "y": 60,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 60,
+      "y": 64,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 60,
+      "y": 68,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 60,
+      "y": 72,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 60,
+      "y": 76,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 60,
+      "y": 80,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 64,
+      "y": 0,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 64,
+      "y": 4,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 64,
+      "y": 8,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 64,
+      "y": 12,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 64,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 64,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 64,
+      "y": 36,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 64,
+      "y": 40,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 64,
+      "y": 60,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 64,
+      "y": 64,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 64,
+      "y": 68,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 64,
+      "y": 72,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 64,
+      "y": 76,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 64,
+      "y": 80,
+      "terrain": "mountain",
+      "controllerId": null,
+      "region": "山民山地"
+    },
+    {
+      "x": 68,
+      "y": 0,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 68,
+      "y": 4,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 68,
+      "y": 8,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 68,
+      "y": 12,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 68,
+      "y": 28,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 68,
+      "y": 32,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 68,
+      "y": 36,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 68,
+      "y": 40,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东丘牧场"
+    },
+    {
+      "x": 72,
+      "y": 0,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 72,
+      "y": 4,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 72,
+      "y": 8,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 72,
+      "y": 12,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 72,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 72,
+      "y": 20,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 72,
+      "y": 24,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 72,
+      "y": 28,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 72,
+      "y": 32,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 72,
+      "y": 36,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 72,
+      "y": 40,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 72,
+      "y": 44,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 0,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 76,
+      "y": 4,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 76,
+      "y": 8,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 76,
+      "y": 12,
+      "terrain": "hill",
+      "controllerId": null,
+      "region": "东南丘陵"
+    },
+    {
+      "x": 76,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 20,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 24,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 28,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 32,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 36,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 40,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 76,
+      "y": 44,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 20,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 24,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 28,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 32,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 36,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 40,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 80,
+      "y": 44,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "东境泥沼"
+    },
+    {
+      "x": 84,
+      "y": 12,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 16,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 20,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 24,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 28,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 32,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 36,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 40,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 44,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 84,
+      "y": 48,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 12,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 16,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 20,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 24,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 28,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 32,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 36,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 40,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 44,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 88,
+      "y": 48,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "戍河（东境大河）"
+    },
+    {
+      "x": 92,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 20,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 24,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 28,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 32,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 36,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 40,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 44,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 92,
+      "y": 48,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 20,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 24,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 28,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 32,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 36,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 40,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 44,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 96,
+      "y": 48,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 20,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 24,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 28,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 32,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 36,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 40,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 44,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 100,
+      "y": 48,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "蚀荒"
+    },
+    {
+      "x": 20,
+      "y": 21,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "椴树河"
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "椴树河"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "椴树河"
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "terrain": "river",
+      "controllerId": null,
+      "region": "椴树河"
+    }
+  ]
 }
