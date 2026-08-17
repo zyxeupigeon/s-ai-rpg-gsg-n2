@@ -19,8 +19,8 @@ const KM = m.meta.scaleKmPerCell || 5;
 
 // ---------- 颜色 ----------
 const C = {
-  sea: '#9cc4dd', swamp: '#7e9057', plain: '#d6e4c3', forest: '#7fa05c',
-  hill: '#c9a86c', mountain: '#8d7b66', river: '#4a7fb5',
+  sea: '#9cc4dd', swamp: '#8f7048', plain: '#d6e4c3', forest: '#6e9e4f',
+  hill: '#c9a86c', mountain: '#a096a8', river: '#4a7fb5',
   land: '#e8e4d8',
 };
 const NAME_CN = { sea: '海洋', swamp: '沼泽/荒野', plain: '平原', forest: '森林', hill: '丘陵', mountain: '山脉', river: '河流' };
@@ -258,14 +258,14 @@ main.push('</svg>');
 const ZOOM = { x0: 12, y0: 14, x1: 32, y1: 26 };
 let zoom = [];
 zoom.push(`<svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
-zoom.push(...drawMap(ZOOM, { labelScale: 1.3, showRoutes: true, showTitle: true, title: '林德霍姆周边', showOutline: false }));
+zoom.push(...drawMap(ZOOM, { labelScale: 0.4, showRoutes: true, showTitle: true, title: '林德霍姆周边', showOutline: false }));
 zoom.push('</svg>');
 
 // ---------- 瓦德堡—林德霍姆走廊放大图（最小范围） ----------
 const CORRIDOR = { x0: 20, y0: 18, x1: 42, y1: 32 };
 let corr = [];
 corr.push(`<svg viewBox="0 0 22 14" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
-corr.push(...drawMap(CORRIDOR, { labelScale: 1.5, showRoutes: true, showTitle: true, title: '瓦德堡—林德霍姆走廊', showOutline: false }));
+corr.push(...drawMap(CORRIDOR, { labelScale: 0.4, showRoutes: true, showTitle: true, title: '瓦德堡—林德霍姆走廊', showOutline: false }));
 corr.push('</svg>');
 
 // ---------- 页面 ----------
