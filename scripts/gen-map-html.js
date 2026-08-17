@@ -267,17 +267,17 @@ main.push(`<text x="-12" y="-6.5" font-size="1.8" fill="#555">1 格 = ${KM} km�
 }
 main.push('</svg>');
 
-// ---------- 林德霍姆周边放大图 ----------
-const ZOOM = { x0: 12, y0: 14, x1: 32, y1: 26 };
+// ---------- 林德霍姆周边放大图（覆盖椴树河全程西段：源头→韦斯特堡→林德霍姆） ----------
+const ZOOM = { x0: 6, y0: 13, x1: 34, y1: 33 };
 let zoom = [];
-zoom.push(`<svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
-zoom.push(...drawMap(ZOOM, { labelScale: 0.4, showRoutes: true, showTitle: true, title: '林德霍姆周边', showOutline: false }));
+zoom.push(`<svg viewBox="0 0 28 20" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
+zoom.push(...drawMap(ZOOM, { labelScale: 0.4, showRoutes: true, showTitle: true, title: '椴树河·林德霍姆一带', showOutline: false }));
 zoom.push('</svg>');
 
-// ---------- 瓦德堡—林德霍姆走廊放大图（最小范围） ----------
-const CORRIDOR = { x0: 20, y0: 18, x1: 42, y1: 32 };
+// ---------- 瓦德堡—林德霍姆走廊放大图（含椴树河下游至白石河汇合处） ----------
+const CORRIDOR = { x0: 20, y0: 11, x1: 42, y1: 32 };
 let corr = [];
-corr.push(`<svg viewBox="0 0 22 14" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
+corr.push(`<svg viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
 corr.push(...drawMap(CORRIDOR, { labelScale: 0.4, showRoutes: true, showTitle: true, title: '瓦德堡—林德霍姆走廊', showOutline: false }));
 corr.push('</svg>');
 
