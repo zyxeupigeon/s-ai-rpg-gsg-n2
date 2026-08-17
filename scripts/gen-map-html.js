@@ -87,8 +87,8 @@ function drawMap(area, opts = {}) {
   const W = X1 - X0, H = Y1 - Y0;
   const P = [];
 
-  // 底图（区域内未定义土地）
-  P.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="${C.land}"/>`);
+  // 底图（区域内未定义土地 = 默认平原，作为底色）
+  P.push(`<rect x="0" y="0" width="${W}" height="${H}" fill="${C.plain}"/>`);
 
   // 图形组（y 翻转：SVG y = H - (mapY - Y0)）
   P.push(`<g transform="scale(1,-1) translate(0,-${H})">`);
@@ -196,11 +196,16 @@ function drawMap(area, opts = {}) {
     for (const t2 of tries) {
       const bx = loc.x - X0 + t2.dx, by = H - (loc.y - Y0) + t2.dy;
       const box = { x1: Math.min(bx, bx + w) - 0.4, x2: Math.max(bx, bx + w) + 0.4, y1: by - fs - 0.4, y2: by + 0.6 };
+      if (box.x1 < 0.4 || box.x2 > W - 0.4 || box.y1 < 0.4 || box.y2 > H - 0.4) continue; // 超出视图边界则跳过
       const conflict = placed.some((p) => !(box.x2 < p.x1 || box.x1 > p.x2 || box.y2 < p.y1 || box.y1 > p.y2));
       if (!conflict) { chosen = t2; placed.push(box); break; }
     }
     if (chosen === tries[0]) {
-      const bx = loc.x - X0 + chosen.dx, by = H - (loc.y - Y0) + chosen.dy;
+      // 全候选冲突/出界时的兜底：钳制坐标到视图内，保证标签完整显示
+      let bx = loc.x - X0 + chosen.dx, by = H - (loc.y - Y0) + chosen.dy;
+      bx = Math.min(Math.max(bx, 0.4), W - w - 0.4);
+      by = Math.min(Math.max(by, fs + 0.4), H - 0.6);
+      chosen = { dx: bx - (loc.x - X0), dy: by - (H - (loc.y - Y0)), anchor: chosen.anchor };
       placed.push({ x1: bx, x2: bx + w, y1: by - fs, y2: by });
     }
     P.push(`<text x="${loc.x - X0 + chosen.dx}" y="${H - (loc.y - Y0) + chosen.dy}" font-size="${fs}" fill="#1c1c1c" stroke="#fff" stroke-width="0.35" paint-order="stroke" text-anchor="${chosen.anchor}">${name}</text>`);
@@ -208,7 +213,7 @@ function drawMap(area, opts = {}) {
   P.push('</g>');
 
   if (showTitle) {
-    P.push(`<text x="0.6" y="1.4" font-size="2.2 * ${labelScale}" font-weight="bold" fill="#1c1c1c">${title}</text>`);
+    P.push(`<text x="0.6" y="1.4" font-size="${(2.4 * labelScale).toFixed(2)}" font-weight="bold" fill="#1c1c1c">${title}</text>`);
   }
   return P;
 }
