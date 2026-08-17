@@ -145,15 +145,23 @@ function drawMap(area, opts = {}) {
     }
   }
 
-  // 路线（官道实线粗、乡道细线）
+  // 路线（官道=深赭粗实线，乡道=浅灰细虚线；有 waypoints 时画折线）
   if (showRoutes) {
     for (const r of m.routes) {
       const a = m.locations.find((l) => l.id === r.from), b = m.locations.find((l) => l.id === r.to);
       if (!a || !b) continue;
       if (a.x < X0 || a.x > X1 || b.x < X0 || b.x > X1 || a.y < Y0 || a.y > Y1 || b.y < Y0 || b.y > Y1) continue;
-      const w = r.group === '官道' ? 0.35 : 0.18;
-      const color = r.group === '官道' ? '#5a4a3a' : '#8a7a6a';
-      P.push(`<line x1="${a.x - X0}" y1="${a.y - Y0}" x2="${b.x - X0}" y2="${b.y - Y0}" stroke="${color}" stroke-width="${w}"><title>${a.name} ↔ ${b.name} · ${r.lengthKm} km · ${r.group}</title></line>`);
+      const isRoad = r.group === '官道';
+      const w = isRoad ? 0.4 : 0.16;
+      const color = isRoad ? '#7a4a2a' : '#b0a898';
+      const dash = isRoad ? '' : ' stroke-dasharray="0.6 0.45"';
+      const pts = [[a.x, a.y], ...(r.waypoints || []), [b.x, b.y]];
+      if (pts.length === 2) {
+        P.push(`<line x1="${a.x - X0}" y1="${a.y - Y0}" x2="${b.x - X0}" y2="${b.y - Y0}" stroke="${color}" stroke-width="${w}"${dash}><title>${a.name} ↔ ${b.name} · ${r.lengthKm} km · ${r.group}</title></line>`);
+      } else {
+        const d = pts.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x - X0} ${y - Y0}`).join(' ');
+        P.push(`<path d="${d}" fill="none" stroke="${color}" stroke-width="${w}"${dash}><title>${a.name} ↔ ${b.name} · ${r.lengthKm} km · ${r.group}</title></path>`);
+      }
     }
   }
 
@@ -240,9 +248,9 @@ main.push(`<circle cx="${LX + 1.3}" cy="${ly - 0.6}" r="1.05" fill="#3a3a3a"/>`)
 main.push(`<text x="${LX + 3.8}" y="${ly}">城市（约200km²）</text>`); ly += LH;
 main.push(`<circle cx="${LX + 1.3}" cy="${ly - 0.6}" r="0.55" fill="#3a3a3a"/>`);
 main.push(`<text x="${LX + 3.8}" y="${ly}">集镇/哨站</text>`); ly += LH;
-main.push(`<line x1="${LX}" y1="${ly - 0.4}" x2="${LX + 2.6}" y2="${ly - 0.4}" stroke="#5a4a3a" stroke-width="0.35"/>`);
+main.push(`<line x1="${LX}" y1="${ly - 0.4}" x2="${LX + 2.6}" y2="${ly - 0.4}" stroke="#7a4a2a" stroke-width="0.4"/>`);
 main.push(`<text x="${LX + 3.8}" y="${ly}">官道</text>`); ly += LH;
-main.push(`<line x1="${LX}" y1="${ly - 0.4}" x2="${LX + 2.6}" y2="${ly - 0.4}" stroke="#8a7a6a" stroke-width="0.18"/>`);
+main.push(`<line x1="${LX}" y1="${ly - 0.4}" x2="${LX + 2.6}" y2="${ly - 0.4}" stroke="#b0a898" stroke-width="0.16" stroke-dasharray="0.6 0.45"/>`);
 main.push(`<text x="${LX + 3.8}" y="${ly}">乡道</text>`); ly += LH;
 main.push('</g>');
 

@@ -317,7 +317,17 @@
       "to": "velen-city",
       "group": "官道",
       "lengthKm": 120,
-      "terrainMod": 0.8
+      "terrainMod": 0.8,
+      "waypoints": [
+        [
+          36,
+          11
+        ],
+        [
+          38,
+          8
+        ]
+      ]
     },
     {
       "from": "waldburg",
