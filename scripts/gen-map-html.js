@@ -19,8 +19,8 @@ const KM = m.meta.scaleKmPerCell || 5;
 
 // ---------- 颜色 ----------
 const C = {
-  sea: '#9cc4dd', swamp: '#a58f6f', plain: '#d6e4c3', forest: '#7fa05c',
-  hill: '#c9a86c', mountain: '#9a8672', river: '#4a7fb5',
+  sea: '#9cc4dd', swamp: '#7e9057', plain: '#d6e4c3', forest: '#7fa05c',
+  hill: '#c9a86c', mountain: '#8d7b66', river: '#4a7fb5',
   land: '#e8e4d8',
 };
 const NAME_CN = { sea: '海洋', swamp: '沼泽/荒野', plain: '平原', forest: '森林', hill: '丘陵', mountain: '山脉', river: '河流' };
@@ -82,7 +82,7 @@ function riverLine(cells) {
 
 // ---------- 区域地图绘制（可复用于主图与放大图） ----------
 function drawMap(area, opts = {}) {
-  const { labelScale = 1, showRoutes = true, showTitle = false, title = '' } = opts;
+  const { labelScale = 1, showRoutes = true, showTitle = false, title = '', showOutline = true } = opts;
   const X0 = area.x0, Y0 = area.y0, X1 = area.x1, Y1 = area.y1;
   const W = X1 - X0, H = Y1 - Y0;
   const P = [];
@@ -107,7 +107,7 @@ function drawMap(area, opts = {}) {
         P.push(`<rect x="${bx - X0}" y="${by - Y0}" width="${bw}" height="${bh}" fill="${C[type]}" stroke="${C[type]}" stroke-width="0.05"><title>${region} · ${NAME_CN[type]} · 约 ${Math.round(meta.areaCells * KM * KM / 1000)} 千km²</title></rect>`);
       }
       const es = edges.filter((e) => e.region === region && e.x1 >= X0 && e.x1 <= X1 && e.y1 >= Y0 && e.y1 <= Y1);
-      if (es.length) {
+      if (es.length && showOutline) {
         const d = es.map((e) => `M${e.x1 - X0} ${e.y1 - Y0} L${e.x2 - X0} ${e.y2 - Y0}`).join(' ');
         P.push(`<path d="${d}" fill="none" stroke="${C[type]}" stroke-width="0.3" opacity="0.85"/>`);
       }
@@ -258,14 +258,26 @@ main.push('</svg>');
 const ZOOM = { x0: 12, y0: 14, x1: 32, y1: 26 };
 let zoom = [];
 zoom.push(`<svg viewBox="0 0 20 12" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
-zoom.push(...drawMap(ZOOM, { labelScale: 1.7, showRoutes: true, showTitle: true, title: '林德霍姆周边' }));
+zoom.push(...drawMap(ZOOM, { labelScale: 1.3, showRoutes: true, showTitle: true, title: '林德霍姆周边', showOutline: false }));
 zoom.push('</svg>');
+
+// ---------- 瓦德堡—林德霍姆走廊放大图（最小范围） ----------
+const CORRIDOR = { x0: 20, y0: 18, x1: 42, y1: 32 };
+let corr = [];
+corr.push(`<svg viewBox="0 0 22 14" xmlns="http://www.w3.org/2000/svg" font-family="Georgia,'Times New Roman',serif" style="border:1px solid #bbb;border-radius:4px">`);
+corr.push(...drawMap(CORRIDOR, { labelScale: 1.5, showRoutes: true, showTitle: true, title: '瓦德堡—林德霍姆走廊', showOutline: false }));
+corr.push('</svg>');
 
 // ---------- 页面 ----------
 const html = `<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${m.meta.title}</title></head><body style="margin:0;background:#f2efe6;font-family:sans-serif"><div style="max-width:1300px;margin:0 auto;padding:14px">
 ${main.join('\n')}
-<div style="margin-top:16px"><h3 style="color:#444;margin:8px 0">林德霍姆周边 · 放大</h3>
-${zoom.join('\n')}
+<div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:24px">
+  <div style="flex:1;min-width:340px"><h3 style="color:#444;margin:8px 0">林德霍姆周边 · 放大</h3>
+  ${zoom.join('\n')}
+  </div>
+  <div style="flex:1;min-width:340px"><h3 style="color:#444;margin:8px 0">瓦德堡—林德霍姆走廊</h3>
+  ${corr.join('\n')}
+  </div>
 </div>
 <p style="color:#888;font-size:12px;margin-top:12px">由 scripts/gen-map-html.js 生成 · 地貌面积/地点面积为假设估计（见 world.md 地貌总览）</p>
 </div></body></html>`;
