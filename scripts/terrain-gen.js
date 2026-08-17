@@ -25,7 +25,7 @@ const REGIONS = [
   { id: 'fjord-sea', name: '峡湾海', type: 'sea', rect: [26, 90, 44, 92] },
   { id: 'white-stone-mountains', name: '白石山脉', type: 'mountain', path: [[28, 9], [32, 8], [36, 9], [40, 8], [44, 9], [48, 8], [52, 9]], width: 3 },
   { id: 'white-stone-river', name: '白石河（界河）', type: 'river', path: [[28, 11], [32, 12], [36, 10], [40, 12], [44, 10], [48, 12], [52, 11]], width: 2 },
-  { id: 'zhu-shu-river', name: '椴树河', type: 'river', path: [[19, 25], [21, 22], [22, 20], [22, 18], [24, 17], [26, 16], [29, 14], [32, 12], [33, 11]], width: 1 },
+  { id: 'zhu-shu-river', name: '椴树河', type: 'river', path: [[6, 26], [9, 28], [13, 30], [15, 31], [18, 30], [19, 27], [21, 23], [22, 20], [22, 18], [24, 17], [26, 16], [29, 14], [32, 12], [33, 11]], width: 1 },
   { id: 'shu-river', name: '戍河（东境大河）', type: 'river', path: [[86, 12], [84, 16], [87, 20], [85, 25], [87, 30], [84, 35], [86, 40], [85, 45], [86, 48]], width: 2 },
   { id: 'east-swamp', name: '东境泥沼', type: 'swamp', rect: [70, 15, 80, 45] },
   { id: 'scourge-wasteland', name: '蚀荒', type: 'swamp', rect: [89, 15, 100, 48] },
