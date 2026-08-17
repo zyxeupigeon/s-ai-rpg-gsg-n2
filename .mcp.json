@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": {
+        "MEMORY_FILE_PATH": "D:/Kimi/-s-AI-RPG-GSG-N2/memory.json"
+      }
+    },
+    "alchemy": {
+      "command": "uvx",
+      "args": ["--from", "mcp-alchemy", "mcp-alchemy"],
+      "env": {
+        "DB_URL": "sqlite:///D:/Kimi/-s-AI-RPG-GSG-N2/campaign.db",
+        "UV_DEFAULT_INDEX": "https://pypi.tuna.tsinghua.edu.cn/simple"
+      }
+    },
+    "qdrant": {
+      "command": "uvx",
+      "args": ["--python", "3.12", "--with", "onnxruntime==1.20.1", "--from", "mcp-server-qdrant", "mcp-server-qdrant"],
+      "env": {
+        "QDRANT_LOCAL_PATH": "D:/Kimi/-s-AI-RPG-GSG-N2/.qdrant",
+        "COLLECTION_NAME": "campaign-memories",
+        "UV_DEFAULT_INDEX": "https://pypi.tuna.tsinghua.edu.cn/simple"
+      }
+    }
+  }
+}
