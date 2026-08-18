@@ -211,6 +211,16 @@
       "terrain": "plain",
       "controllerId": "kalden",
       "territoryId": "kalden"
+    },
+    {
+      "id": "saltern-valley",
+      "name": "盐泉谷",
+      "type": "盐泉",
+      "x": 30,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "territoryId": null
     }
   ],
   "routes": [
@@ -335,6 +345,13 @@
       "group": "官道",
       "lengthKm": 156,
       "terrainMod": 0.8
+    },
+    {
+      "from": "stein-domain",
+      "to": "saltern-valley",
+      "group": "乡道",
+      "lengthKm": 12,
+      "terrainMod": 1
     }
   ],
   "territories": [
@@ -3287,6 +3304,41 @@
       "terrain": "river",
       "controllerId": null,
       "region": "戍河（东境大河）"
+    },
+    {
+      "x": 29,
+      "y": 15,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "盐泉谷"
+    },
+    {
+      "x": 30,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "盐泉谷"
+    },
+    {
+      "x": 31,
+      "y": 17,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "盐泉谷"
+    },
+    {
+      "x": 30,
+      "y": 15,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "盐泉谷"
+    },
+    {
+      "x": 29,
+      "y": 16,
+      "terrain": "swamp",
+      "controllerId": null,
+      "region": "盐泉谷"
     }
   ]
 }
