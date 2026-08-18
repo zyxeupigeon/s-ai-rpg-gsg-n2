@@ -217,3 +217,5 @@
 {"type":"relation","from":"北境牧场","to":"英格玛","relationType":"腹地"}
 {"type":"relation","from":"西境酒乡","to":"韦斯特家族","relationType":"所在"}
 {"type":"relation","from":"半瞎老猫","to":"老镇","relationType":"黑市贩子"}
+{"type":"entity","name":"地窖窖藏","entityType":"资产","observations":["祖上铸脉帝国边地骑士一族乱世窖藏（灰潮南逃时封存），元月17日发现","银约90磅+金约18磅+杂，毛值约270金磅；可兑约245","经老镇金匠/矿镇/西港帆与秤整批兑出231金磅（折3-10%）","还清全部债务201+磨坊料补5+织机1→储备24","旧帝国器物漆木匣不兑：古铭文银器+古羊皮，留研究（线A钩子）"]}
+{"type":"relation","from":"地窖窖藏","to":"西格丽德·林德霍姆","relationType":"发现并处置"}
