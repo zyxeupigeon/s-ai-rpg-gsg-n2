@@ -229,3 +229,8 @@
 {"type":"relation","from":"西境酒乡","to":"韦斯特家族","relationType":"所在"}
 {"type":"relation","from":"半瞎老猫","to":"老镇","relationType":"黑市贩子"}
 {"type":"relation","from":"地窖窖藏","to":"西格丽德·林德霍姆","relationType":"发现并处置"}
+{"type":"entity","name":"卡斯帕·克雷默","entityType":"人物","observations":["主角同父异母兄长，约30岁，王家包税人+宫廷供货商+布行钱庄东主（瓦德堡）","老林德霍姆男爵戍关时所生，被瓦德堡布商克雷默收养，干净发家不涉军需承包","查证身世早于剧情1-2年，匿名等待时机——以『王都大主顾』名义匿名资助","双底线锚点：绝不让商行与王廷信任受损；绝不出卖妹妹利益","档案：characters/kaspar-kramer.md"]}
+{"type":"relation","from":"卡斯帕·克雷默","to":"西格丽德·林德霍姆","relationType":"同父异母兄妹"}
+{"type":"relation","from":"卡斯帕·克雷默","to":"林德霍姆家族","relationType":"血脉"}
+{"type":"relation","from":"卡斯帕·克雷默","to":"瓦德兰王国","relationType":"王家包税人"}
+{"type":"relation","from":"卡斯帕·克雷默","to":"主角领地","relationType":"匿名资助"}
