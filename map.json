@@ -221,6 +221,16 @@
       "terrain": "swamp",
       "controllerId": null,
       "territoryId": null
+    },
+    {
+      "id": "imperial-vault",
+      "name": "泉之地库",
+      "type": "遗迹",
+      "x": 27,
+      "y": 38,
+      "terrain": "forest",
+      "controllerId": null,
+      "territoryId": null
     }
   ],
   "routes": [
