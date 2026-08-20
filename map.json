@@ -231,6 +231,26 @@
       "terrain": "forest",
       "controllerId": null,
       "territoryId": null
+    },
+    {
+      "id": "salt-city",
+      "name": "盐泉城（Saltkelda）",
+      "type": "城市",
+      "x": 30,
+      "y": 16,
+      "terrain": "plain",
+      "controllerId": "tbd-protagonist",
+      "territoryId": "salt-city"
+    },
+    {
+      "id": "salt-city-tollgate",
+      "name": "盐城税卡（城门）",
+      "type": "关隘",
+      "x": 29,
+      "y": 15,
+      "terrain": "plain",
+      "controllerId": "tbd-protagonist",
+      "territoryId": "salt-city"
     }
   ],
   "routes": [
@@ -362,6 +382,27 @@
       "group": "乡道",
       "lengthKm": 12,
       "terrainMod": 1
+    },
+    {
+      "from": "protagonist-domain",
+      "to": "salt-city",
+      "group": "水路",
+      "lengthKm": 45,
+      "terrainMod": 1
+    },
+    {
+      "from": "salt-city",
+      "to": "valen-city",
+      "group": "官道",
+      "lengthKm": 27,
+      "terrainMod": 0.8
+    },
+    {
+      "from": "salt-city",
+      "to": "dwarf-mine-town",
+      "group": "官道",
+      "lengthKm": 22,
+      "terrainMod": 0.8
     }
   ],
   "territories": [
@@ -539,6 +580,20 @@
       ],
       "neighbors": [
         "waldan"
+      ]
+    },
+    {
+      "name": "盐泉城（半自治市镇）",
+      "type": "自治市镇",
+      "controllerId": "tbd-protagonist",
+      "capitalId": "salt-city",
+      "locations": [
+        "salt-city",
+        "salt-city-tollgate"
+      ],
+      "neighbors": [
+        "protagonist-domain",
+        "valen-duchy"
       ]
     }
   ],
