@@ -2,6 +2,8 @@
 
 > 目标：clone 之后，在**自己的 Windows 电脑**上拉起与源机器一致的 GM 环境（战役文件 + scripts + MCP + skills），自己当 GM 跑，而不是当玩家。本战役不绑定特定 agent（opencode / Claude Code / Kimi Code / 其它均可）。
 
+> 📦 **新设备从零恢复（含项目 + 存档 + Kimi Code 会话）的完整步骤见仓库根 `RESTORE.md`** —— 本文件是环境与配置细节参考。
+
 ---
 
 ## 0. 前提
